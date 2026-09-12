@@ -1,0 +1,18 @@
+name: Manual Message Practice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: First Message
+        run: echo "Hello from my manual workflow"
+
+      - name: Second Message
+        run: echo "I started this workflow manually"
+
+      - name: Third Message
+        run: echo "GitHub Actions is working"
