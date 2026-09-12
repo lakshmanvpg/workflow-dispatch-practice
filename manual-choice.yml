@@ -1,0 +1,21 @@
+name: Manual Choice Practice
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Choose the environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+
+jobs:
+  choice-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Environment
+        run: echo "You selected: ${{ inputs.environment }}"
