@@ -1,0 +1,16 @@
+name: Manual Input Practice
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Enter a message"
+        required: true
+
+jobs:
+  input-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show Message
+        run: echo "You entered:${{ inputs.message }}"
