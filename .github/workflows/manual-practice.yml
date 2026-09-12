@@ -1,0 +1,12 @@
+name: Manual Practice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Manual Run
+        run: echo "This workflow was started manually"
